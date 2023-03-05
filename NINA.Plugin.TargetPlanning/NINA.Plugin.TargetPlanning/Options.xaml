@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:alt="clr-namespace:NINA.WPF.Base.View;assembly=NINA.WPF.Base"
     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-    xmlns:ninactrl="clr-namespace:NINACustomControlLibrary;assembly=NINACustomControlLibrary"
+    xmlns:ninactrl="clr-namespace:NINA.CustomControlLibrary;assembly=NINA.CustomControlLibrary"
     xmlns:ns="clr-namespace:NINA.Core.Locale;assembly=NINA.Core"
     xmlns:oxy="http://oxyplot.org/wpf"
     xmlns:rules="clr-namespace:NINA.Core.Utility.ValidationRules;assembly=NINA.Core"
@@ -43,8 +43,8 @@
                             <TextBlock VerticalAlignment="Center" Text="Target" />
                             <StackPanel Orientation="Horizontal">
                                 <ninactrl:AutoCompleteBox
-                                    Margin="5,0,0,0"
                                     Width="140"
+                                    Margin="5,0,0,0"
                                     VerticalAlignment="Center"
                                     VerticalContentAlignment="Center"
                                     Foreground="{StaticResource PrimaryBrush}"
