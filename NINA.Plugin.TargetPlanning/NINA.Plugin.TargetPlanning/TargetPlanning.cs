@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -337,7 +338,7 @@ namespace TargetPlanning.NINAPlugin {
 
         private void DailyDetailsHTMLReport(object obj) {
             try {
-                System.Diagnostics.Process.Start(HTMLReport.GetDailyDetailsHTMLReportPath());
+                System.Diagnostics.Process.Start(new ProcessStartInfo(HTMLReport.GetDailyDetailsHTMLReportPath()) { UseShellExecute = true });
             }
             catch (Exception ex) {
                 Logger.Error($"DailyDetails HTML report exception: {ex.Message} {ex.StackTrace}");
@@ -539,7 +540,7 @@ namespace TargetPlanning.NINAPlugin {
 
         private void ImagingSeasonHTMLReport(object obj) {
             try {
-                System.Diagnostics.Process.Start(HTMLReport.GetImagingSeasonHTMLReportPath());
+                System.Diagnostics.Process.Start(new ProcessStartInfo(HTMLReport.GetImagingSeasonHTMLReportPath()) { UseShellExecute = true });
             }
             catch (Exception ex) {
                 Logger.Error($"ImagingSeason HTML report exception: {ex.Message} {ex.StackTrace}");
